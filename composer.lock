@@ -1,0 +1,133 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "71a415bcaf93f6c2b74c8b15c87cb9d6",
+    "packages": [
+        {
+            "name": "nemiah/php-fints",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nemiah/phpFinTS.git",
+                "reference": "e58cb825c178d4c39a8974a9dd93abbc8094551f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nemiah/phpFinTS/zipball/e58cb825c178d4c39a8974a9dd93abbc8094551f",
+                "reference": "e58cb825c178d4c39a8974a9dd93abbc8094551f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "psr/log": "~1.0"
+            },
+            "suggest": {
+                "monolog/monolog": "Allow sending log messages to a variety of different handlers"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Fhp": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP Library for the protocols fints and hbci",
+            "homepage": "http://fints-hbci-php.markus-schindler.de",
+            "time": "2017-02-15T13:48:21+00:00"
+        },
+        {
+            "name": "padrio/banking-proxy-shared",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Padrio/banking-proxy-shared.git",
+                "reference": "5bc7d2e90dfc5752d44db30a143a28173aa7cdf4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Padrio/banking-proxy-shared/zipball/5bc7d2e90dfc5752d44db30a143a28173aa7cdf4",
+                "reference": "5bc7d2e90dfc5752d44db30a143a28173aa7cdf4",
+                "shasum": ""
+            },
+            "require": {
+                "nemiah/php-fints": "1.0.*"
+            },
+            "type": "models",
+            "autoload": {
+                "psr-4": {
+                    "Padrio\\BankingProxy\\Shared\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pascal Krason",
+                    "email": "p.krason@padr.io"
+                }
+            ],
+            "description": "Shared files for the banking-proxy",
+            "time": "2018-09-27T20:02:52+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2016-10-10T12:19:37+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

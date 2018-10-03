@@ -1,0 +1,20 @@
+{
+    "name": "padrio/banking-proxy-lib",
+    "description": "Service which transfers hbci tansfers to cool models",
+    "type": "library",
+    "require": {
+        "nemiah/php-fints": "^1.0",
+        "padrio/banking-proxy-shared": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "Pascal Krason",
+            "email": "p.krason@padr.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Padrio\\BankingProxy\\": "src/"
+        }
+    }
+}
