@@ -1,13 +1,9 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Padrio\BankingProxy;
 
 use DateTime;
 use Exception;
-use Fhp\Adapter\Exception\AdapterException;
-use Fhp\Adapter\Exception\CurlException;
 use Fhp\FinTs;
 use Fhp\Model\SEPAAccount;
 use Padrio\BankingProxy\Shared\Model\StatementCollection;
@@ -31,7 +27,11 @@ final class Transaction
 
     public function __construct(FinTs $finTs, LoggerInterface $logger = null)
     {
-        $this->logger = $logger ?? new NullLogger();
+        $this->logger = $logger;
+        if($logger === null) {
+            $this->logger = new NullLogger();
+        }
+
         $this->finTs = $finTs;
     }
 
@@ -43,7 +43,7 @@ final class Transaction
      * @return StatementCollection
      * @throws Exception
      */
-    public function getStatementCollection(int $accountNumber, DateTime $from, DateTime $to): StatementCollection
+    public function getStatementCollection($accountNumber, DateTime $from, DateTime $to)
     {
         $account = $this->findAccountByNumber($accountNumber);
         if($account === null) {
@@ -54,7 +54,12 @@ final class Transaction
         return StatementCollection::createFromFhpStatement($statement);
     }
 
-    public function findAccountByNumber(int $accountNumber): ?SEPAAccount
+    /**
+     * @param int $accountNumber
+     *
+     * @return SEPAAccount|null
+     */
+    public function findAccountByNumber($accountNumber)
     {
         static $cache = [];
         if(isset($cache[$accountNumber])) {
@@ -63,7 +68,7 @@ final class Transaction
 
         try {
             $accounts = $this->finTs->getSEPAAccounts();
-        } catch (CurlException | AdapterException $e) {
+        } catch (Exception $e) {
             $this->logger->critical($e->getMessage());
 
             return null;
