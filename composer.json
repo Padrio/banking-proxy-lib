@@ -4,6 +4,7 @@
     "type": "library",
     "require": {
         "nemiah/php-fints": "^1.0",
+        "psr/log": "^1.0.2",
         "padrio/banking-proxy-shared": "^1.0"
     },
     "authors": [

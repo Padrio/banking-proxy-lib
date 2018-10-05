@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71a415bcaf93f6c2b74c8b15c87cb9d6",
+    "content-hash": "013527ebf0ea2b6304495566b301046b",
     "packages": [
         {
             "name": "nemiah/php-fints",
