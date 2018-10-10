@@ -6,7 +6,7 @@ use DateTime;
 use Exception;
 use Fhp\FinTs;
 use Fhp\Model\SEPAAccount;
-use Padrio\BankingProxy\Shared\Model\StatementCollection;
+use Padrio\BankingProxy\Model\StatementCollection;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 
